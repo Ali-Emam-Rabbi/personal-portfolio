@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { navLinks, profile } from "../data/portfolioData";
 import { scrollToTarget } from "../utils/scroll";
 
@@ -6,6 +6,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [resumeUnavailable, setResumeUnavailable] = useState(false);
+  const resumeTimer = useRef(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -37,6 +38,8 @@ const Navbar = () => {
     e.preventDefault();
     setOpen(false);
     setResumeUnavailable(true);
+    if (resumeTimer.current) clearTimeout(resumeTimer.current);
+    resumeTimer.current = setTimeout(() => setResumeUnavailable(false), 3500);
   };
 
   return (
@@ -86,7 +89,9 @@ const Navbar = () => {
           </a>
           <a
             className="navbar__cta btn btn--primary btn--small"
-            href="mailto:rabbiboy226@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=rabbiboy226@gmail.com"
+            target="_blank"
+            rel="noreferrer"
             data-testid="navbar-contact-cta"
           >
             <span>Let's talk</span>
@@ -137,7 +142,9 @@ const Navbar = () => {
             <span>Download Resume</span>
           </a>
           <a
-            href="mailto:rabbiboy226@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=rabbiboy226@gmail.com"
+            target="_blank"
+            rel="noreferrer"
             className="btn btn--primary"
             onClick={() => setOpen(false)}
             data-testid="mobile-nav-contact"

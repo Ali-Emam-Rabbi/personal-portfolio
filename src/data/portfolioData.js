@@ -36,14 +36,26 @@ export const socials = [
 ];
 
 export const featured = {
-  title: "Latest Website Project",
+  title: "OurDrop – PC to Phone File Transfer",
   pill: "Featured",
   description:
-    "Built a modern e-commerce platform featuring dynamic product filtering, cart functionality, and responsive UI design using HTML, CSS, JavaScript, React, Firebase Backend and AI-assisted development workflows.",
-  codeHref: "https://github.com/Ali-Emam-Rabbi",
+    "Built OurDrop, a free and open-source app that moves files of any type and size between a Windows PC and an Android phone over Wi-Fi or a phone hotspot, with no internet, no login, no cables and no cloud. It offers QR-code connect, chunked transfers with pause and resume verified by SHA-256, background receiving on the phone, sharing from any app, and updates from inside the app. Built with React, TypeScript, a Node.js server, Electron and native Android (Java), together with Sadhin Khan.",
+  codeHref: "https://github.com/Ali-Emam-Rabbi/OurDrop-Software-Project",
 };
 
 export const projects = [
+  {
+    name: "OurDrop – PC to Phone File Transfer",
+    href: "https://github.com/Ali-Emam-Rabbi/OurDrop-Software-Project",
+    tag: "Open Source",
+    stack: ["React", "TypeScript", "Node.js", "Electron", "Android"],
+  },
+  {
+    name: "Zynox Download Manager",
+    href: "https://github.com/Sadhin404/Projects/tree/main/Zynox%20Download%20Manager",
+    tag: "Downloader",
+    stack: ["yt-dlp", "Android", "Windows", "8K + MP3"],
+  },
   {
     name: "Ali Emam Store – E-Commerce",
     href: "https://aliemamstore.netlify.app/",
@@ -111,6 +123,9 @@ export const tools = [
   { name: "HTML5", category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
   { name: "CSS3", category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
   { name: "React", category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "TypeScript", category: "Language", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+  { name: "Node.js", category: "Backend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+  { name: "Electron", category: "Backend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" },
 
 
 ];

@@ -34,7 +34,9 @@ const Contact = () => {
             <div className="contact-card__rows">
               <a
                 className="contact-row contact-row--link"
-                href={`mailto:${profile.email}`}
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`}
+                target="_blank"
+                rel="noreferrer"
                 data-testid="contact-email"
               >
                 <span className="contact-row__icon">
@@ -85,7 +87,9 @@ const Contact = () => {
 
             <a
               className="btn btn--primary contact-card__cta"
-              href={`mailto:${profile.email}`}
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`}
+              target="_blank"
+              rel="noreferrer"
               data-testid="contact-send-btn"
             >
               <span>Send a message</span>

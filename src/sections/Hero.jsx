@@ -5,6 +5,7 @@ import { scrollToTarget } from "../utils/scroll";
 const Hero = () => {
   const imgWrapRef = useRef(null);
   const [resumeUnavailable, setResumeUnavailable] = useState(false);
+  const resumeTimer = useRef(null);
 
   useEffect(() => {
     const wrap = imgWrapRef.current;
@@ -38,6 +39,8 @@ const Hero = () => {
   const handleResumeClick = (e) => {
     e.preventDefault();
     setResumeUnavailable(true);
+    if (resumeTimer.current) clearTimeout(resumeTimer.current);
+    resumeTimer.current = setTimeout(() => setResumeUnavailable(false), 3500);
   };
 
   return (
@@ -101,7 +104,9 @@ const Hero = () => {
           >
             <a
               className="btn btn--primary"
-              href={`mailto:${profile.email}`}
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`}
+              target="_blank"
+              rel="noreferrer"
               data-testid="hero-contact-btn"
             >
               <span>Contact</span>
@@ -396,10 +401,10 @@ const Hero = () => {
           color: #fff;
           background: linear-gradient(
             145deg,
-            rgba(255, 255, 255, 0.1),
-            rgba(255, 255, 255, 0.04)
+            rgba(8, 12, 22, 0.78),
+            rgba(8, 12, 22, 0.62)
           );
-          border: 1px solid rgba(255, 255, 255, 0.12);
+          border: 1px solid rgba(255, 255, 255, 0.22);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);

@@ -45,7 +45,7 @@ const Footer = () => {
 
         <div className="footer__col footer__col--cta">
           <span className="mono footer__label">EMAIL</span>
-          <a className="footer__email" href={`mailto:${profile.email}`} data-testid="footer-email">
+          <a className="footer__email" href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`} target="_blank" rel="noreferrer" data-testid="footer-email">
             {profile.email}
           </a>
           <a href="#top" onClick={handleTop} className="footer__top">
